@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start list_page",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/list_page",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#comlbflptrackerlistpage-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/FlpPluginTrackerUserLogon/list_page\"}"
+            }
+        },
+        {
+            "name": "Start list_page Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/list_page",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#comlbflptrackerlistpage-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/FlpPluginTrackerUserLogon/list_page\"}"
+            }
+        }
+    ]
+}
